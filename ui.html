@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>User Management System</title>
+    <style>
+        body { font-family: Arial, sans-serif; }
+        table { width: 100%; border-collapse: collapse; }
+        th, td { border: 1px solid #ddd; padding: 8px; text-align: left; }
+        th { background-color: #f2f2f2; }
+        form { margin-bottom: 20px; }
+        input[type="text"], input[type="number"] { padding: 10px; margin-right: 10px; }
+        input[type="submit"] { padding: 10px 20px; background-color: #4CAF50; color: white; border: none; cursor: pointer; }
+        input[type="submit"]:hover { background-color: #45a049; }
+    </style>
+</head>
+<body>
+
+<h2>User Management System</h2>
+
+<!-- Форма для добавления пользователя -->
+<h3>Add User:</h3>
+<form action="/add_user" method="post">
+    <label for="user_id">User ID:</label>
+    <input type="number" id="user_id" name="user_id" required>
+    <label for="name">Name:</label>
+    <input type="text" id="name" name="name" required>
+    <input type="submit" value="Add User">
+</form>
+
+<!-- Форма для удаления пользователя -->
+<h3>Remove User:</h3>
+<form action="/remove_user" method="post">
+    <label for="remove_user_id">User ID:</label>
+    <input type="number" id="remove_user_id" name="remove_user_id" required>
+    <input type="submit" value="Remove User">
+</form>
+
+<!-- Таблица для отображения пользователей -->
+<h3>User List:</h3>
+<table>
+    <tr>
+        <th>User ID</th>
+        <th>Name</th>
+        <th>Access Level</th>
+    </tr>
+    <!-- Здесь будут вставлены строки таблицы через JavaScript или серверный код -->
+</table>
+
+</body>
+</html>
